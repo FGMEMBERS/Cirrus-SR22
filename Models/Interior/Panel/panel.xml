@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>panel.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>panel1</object-name>
+    <object-name>panel2</object-name>
+    
+    <!-- Objets transparents -->
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>panel2</object-name>
+    <condition>
+      <property>/controls/electric/battery-switch</property>
+    </condition>
+    <emission>
+      <factor-prop>controls/lighting/panel-dim</factor-prop>
+      <red>   0.8 </red>
+      <green> 0.4 </green>
+      <blue>  0.4 </blue>
+    </emission>
+  </animation>
+
+  <!-- Commutateurs -->
+  <model>
+    <path>Aircraft/Cirrus-SR22/Models/Interior/Panel/Instruments/buttons/all-buttons.xml</path>
+    <offsets>
+      <x-m>  0.074 </x-m>
+      <y-m> -0.164 </y-m>
+      <z-m> -0.128 </z-m>
+      <pitch-deg> -90 </pitch-deg>
+    </offsets>
+  </model>
+
+  <!-- YOKES -->
+  <model>
+    <path>Aircraft/Cirrus-SR22/Models/Interior/Panel/Instruments/yokes/all-yokes.xml</path>
+  </model>
+  
+  <!-- CHRONOMETER -->
+  <model>
+    <path>Aircraft/Cirrus-SR22/Models/Interior/Panel/Instruments/chrono/chronometer.xml</path>
+    <offsets>
+      <x-m> -0.012 </x-m>
+      <y-m> -0.317 </y-m>
+      <z-m> -0.013 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- WARNING -->
+  <model>
+    <path>Aircraft/Cirrus-SR22/Models/Interior/Panel/Instruments/warning/warning.xml</path>
+    <offsets>
+      <x-m> -0.01091 </x-m>
+      <y-m> -0.19478 </y-m>
+      <z-m>  0.04667 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- ASI -->
+  <model>
+    <path>Aircraft/Cirrus-SR22/Models/Interior/Panel/Instruments/asi/asi.xml</path>
+    <offsets>
+      <x-m> -0.00798 </x-m>
+      <y-m> -0.25300 </y-m>
+      <z-m> -0.00400 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- AI -->
+  <model>
+    <path>Aircraft/Cirrus-SR22/Models/Interior/Panel/Instruments/ai/ai.xml</path>
+    <offsets>
+      <x-m> -0.01003 </x-m>
+      <y-m> -0.16900 </y-m>
+      <z-m> -0.00400 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- ALT -->
+  <model>
+    <path>Aircraft/Cirrus-SR22/Models/Interior/Panel/Instruments/alt/alt.xml</path>
+    <offsets>
+      <x-m> -0.008 </x-m>
+      <y-m> -0.083 </y-m>
+      <z-m> -0.004 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- KI204 -->
+  <model>
+    <path>Aircraft/Cirrus-SR22/Models/Interior/Panel/Instruments/KI204/KI204.xml</path>
+    <offsets>
+      <x-m> -0.007 </x-m>
+      <y-m> -0.333 </y-m>
+      <z-m> -0.076 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- TURN -->
+  <model>
+    <path>Aircraft/Cirrus-SR22/Models/Interior/Panel/Instruments/turn/turn.xml</path>
+    <offsets>
+      <x-m> -0.012 </x-m>
+      <y-m> -0.253 </y-m>
+      <z-m> -0.076 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- HSI -->
+  <model>
+    <path>Aircraft/Cirrus-SR22/Models/Interior/Panel/Instruments/hsi/hsi.xml</path>
+    <offsets>
+      <x-m> -0.012 </x-m>
+      <y-m> -0.169 </y-m>
+      <z-m> -0.084 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- VSI -->
+  <model>
+    <path>Aircraft/Cirrus-SR22/Models/Interior/Panel/Instruments/vsi/vsi.xml</path>
+    <offsets>
+      <x-m> -0.010 </x-m>
+      <y-m> -0.083 </y-m>
+      <z-m> -0.076 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- TACHIMETER -->
+  <model>
+    <path>Aircraft/Cirrus-SR22/Models/Interior/Panel/Instruments/tach/tach.xml</path>
+    <offsets>
+      <x-m>  0.0326 </x-m>
+      <y-m>  0.2378 </y-m>
+      <z-m> -0.0040 </z-m>
+      <heading-deg> -10 </heading-deg>
+    </offsets>
+  </model>
+  
+  <!-- EMPTY -->
+  <model>
+    <path>Aircraft/Cirrus-SR22/Models/Interior/Panel/Instruments/empty/empty.xml</path>
+    <offsets>
+      <x-m>  0.0410 </x-m>
+      <y-m>  0.2950 </y-m>
+      <z-m> -0.0040 </z-m>
+      <heading-deg> -10 </heading-deg>
+    </offsets>
+  </model>
+  
+  <!-- FUELGAUGE -->
+  <model>
+    <path>Aircraft/Cirrus-SR22/Models/Interior/Panel/Instruments/FuelGauge/FuelGauge.xml</path>
+    <offsets>
+      <x-m>  0.0300 </x-m>
+      <y-m>  0.2378 </y-m>
+      <z-m> -0.0600 </z-m>
+      <heading-deg> -10 </heading-deg>
+    </offsets>
+  </model>
+  
+  <!-- TEMPERETURE -->
+  <model>
+    <path>Aircraft/Cirrus-SR22/Models/Interior/Panel/Instruments/temp/temp.xml</path>
+    <offsets>
+      <x-m>  0.0410 </x-m>
+      <y-m>  0.2950 </y-m>
+      <z-m> -0.0600 </z-m>
+      <heading-deg> -10 </heading-deg>
+    </offsets>
+  </model>
+  
+  <!-- MAP -->
+  <model>
+    <path>Aircraft/Cirrus-SR22/Models/Interior/Panel/Instruments/map/map.xml</path>
+    <offsets>
+      <x-m>  0.01436 </x-m>
+      <y-m>  0.08516 </y-m>
+      <z-m> -0.03125 </z-m>
+      <heading-deg> -10 </heading-deg>
+    </offsets>
+  </model>
+  
+</PropertyList>
