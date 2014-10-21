@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>interior.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>interieur</object-name>
+    <object-name>inttour</object-name>
+    <object-name>intporteG</object-name>
+    <object-name>intporteD</object-name>
+    <object-name>intcargo</object-name>
+    <object-name>planchet</object-name>
+    
+    <!-- Objets transparents -->
+    <object-name>intvitres</object-name>
+    <object-name>intvitreporteG</object-name>
+    <object-name>intvitreporteD</object-name>
+  </animation>
+
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Aircraft/Cirrus-SR22/Models/Effects/Glass/glass</inherits-from>
+    <object-name>intvitres</object-name>
+    <object-name>intvitreporteG</object-name>
+    <object-name>intvitreporteD</object-name>
+  </effect>
+  
+  <!-- Pilote -->
+  <model>
+    <path>Aircraft/Cirrus-SR22/Models/Pilot/pilot.xml</path>
+    <offsets>
+      <x-m> -1.500 </x-m>
+      <y-m> -0.300 </y-m>
+      <z-m> -0.100 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Tableau de bord -->
+  <model>
+    <path>Aircraft/Cirrus-SR22/Models/Interior/Panel/panel.xml</path>
+    <offsets>
+      <x-m> -1.96884 </x-m>
+      <y-m> -0.17124 </y-m>
+      <z-m>  0.20325 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Cirrus-SR22/Models/Interior/Seats/all-seats.xml</path>
+  </model>
+
+  <!-- Porte gauche -->
+  <animation>
+    <name>IntLaPorteGauche</name>
+    <object-name>intporteG</object-name>
+    <object-name>intvitreporteG</object-name>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>IntLaPorteGauche</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>doors.crew.toggle();</script>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>IntLaPorteGauche</object-name>
+    <property>sim/model/door-positions/crew/position-norm</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>   0 </dep></entry>
+      <entry><ind> 1 </ind><dep> -60 </dep></entry>
+    </interpolation>
+    <axis>
+      <x1-m> -1.82704 </x1-m>
+      <y1-m> -0.63497 </y1-m>
+      <z1-m>  0.02232 </z1-m>
+      <x2-m> -1.52065 </x2-m>
+      <y2-m> -0.21593 </y2-m>
+      <z2-m>  0.63117 </z2-m>
+    </axis>
+  </animation>
+
+  <!-- Porte droite -->
+  <animation>
+    <name>IntLaPorteDroite</name>
+    <object-name>intporteD</object-name>
+    <object-name>intvitreporteD</object-name>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>IntLaPorteDroite</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>doors.passenger.toggle();</script>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>IntLaPorteDroite</object-name>
+    <property>sim/model/door-positions/passenger/position-norm</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>   0 </dep></entry>
+      <entry><ind> 1 </ind><dep> -60 </dep></entry>
+    </interpolation>
+    <axis>
+      <x1-m> -1.52065 </x1-m>
+      <y1-m>  0.21593 </y1-m>
+      <z1-m>  0.63117 </z1-m>
+      <x2-m> -1.82704 </x2-m>
+      <y2-m>  0.63497 </y2-m>
+      <z2-m>  0.02232 </z2-m>
+    </axis>
+  </animation>
+
+  <!-- Porte cargo -->
+  <animation>
+    <name>IntLaPorteCargo</name>
+    <object-name>intcargo</object-name>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>IntLaPorteCargo</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>doors.cargo.toggle();</script>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>IntLaPorteCargo</object-name>
+    <property>sim/model/door-positions/cargo/position-norm</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>   0 </dep></entry>
+      <entry><ind> 1 </ind><dep> -90 </dep></entry>
+    </interpolation>
+    <axis>
+      <x1-m>  0.03508 </x1-m>
+      <y1-m> -0.56316 </y1-m>
+      <z1-m> -0.31176 </z1-m>
+      <x2-m>  0.05461 </x2-m>
+      <y2-m> -0.56892 </y2-m>
+      <z2-m> -0.06013 </z2-m>
+    </axis>
+  </animation>
+
+</PropertyList>
