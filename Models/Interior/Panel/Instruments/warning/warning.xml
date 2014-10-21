@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>warning.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>base</object-name>
+    <object-name>warning01.on</object-name>
+    <object-name>warning02.on</object-name>
+    <object-name>warning03.on</object-name>
+    <object-name>warning04.on</object-name>
+    <object-name>warning05.on</object-name>
+    <object-name>warning06.on</object-name>
+    <object-name>warning01.off</object-name>
+    <object-name>warning02.off</object-name>
+    <object-name>warning03.off</object-name>
+    <object-name>warning04.off</object-name>
+    <object-name>warning05.off</object-name>
+    <object-name>warning06.off</object-name>
+    
+    <!-- Objets transparents -->
+  </animation>
+
+   <animation>
+    <type>material</type>
+    <object-name>warning01.on</object-name>
+    <object-name>warning02.on</object-name>
+    <object-name>warning03.on</object-name>
+    <object-name>warning04.on</object-name>
+    <object-name>warning05.on</object-name>
+    <object-name>warning06.on</object-name>
+    <condition>
+      <property>controls/lighting/instrument-lights</property>
+      <property>/controls/electric/battery-switch</property>
+    </condition>
+    <emission>
+      <factor-prop>controls/lighting/luminosite-lights</factor-prop>
+      <red>   2 </red>
+      <green> 2 </green>
+      <blue>  2 </blue>
+    </emission>
+  </animation>
+
+   <animation>
+    <type>material</type>
+    <object-name>warning01.off</object-name>
+    <object-name>warning02.off</object-name>
+    <object-name>warning03.off</object-name>
+    <object-name>warning04.off</object-name>
+    <object-name>warning05.off</object-name>
+    <object-name>warning06.off</object-name>
+    <condition>
+      <property>controls/lighting/instrument-lights</property>
+      <property>/controls/electric/battery-switch</property>
+    </condition>
+    <emission>
+      <red>   0.01 </red>
+      <green> 0.01 </green>
+      <blue>  0.01 </blue>
+    </emission>
+  </animation>
+
+  <!-- battery charge : on if the engine not running and / or the alternator not engaged -->
+  <animation>
+    <type>select</type>
+    <object-name>warning01.on</object-name>
+    <condition>
+      <and>
+        <or>
+          <not><property>engines/engine/running</property></not>
+          <not><property>controls/engines/engine/master-alt</property></not>
+          <property>controls/lighting/warning-test</property>
+        </or>
+        <property>controls/electric/battery-switch</property>
+      </and>
+    </condition>
+  </animation>
+  
+  <!-- To do -->
+  <animation>
+    <type>select</type>
+    <object-name>warning02.on</object-name>
+    <object-name>warning03.on</object-name>
+    <object-name>warning04.on</object-name>
+    <condition>
+      <equals>
+        <value>true</value>
+      </equals>
+    </condition>
+  </animation>
+  
+  <!-- Starter : ON if voltage > 8V -->
+  <animation>
+    <type>select</type>
+    <object-name>warning05.on</object-name>
+    <condition>
+      <and>
+        <or>
+          <greater-than-equals>
+            <property>systems/electrical/outputs/starter</property>
+            <value> 8 </value>
+          </greater-than-equals>
+          <property>controls/lighting/warning-test</property>
+        </or>
+        <property>controls/electric/battery-switch</property>
+      </and>
+    </condition>
+  </animation>
+  
+  <!-- Flaps : ON if flap down -->
+  <animation>
+    <type>select</type>
+    <object-name>warning06.on</object-name>
+    <condition>
+      <and>
+        <or>
+          <greater-than-equals>
+            <property>surface-positions/flap-pos-norm</property>
+            <value> 0.06 </value>
+          </greater-than-equals>
+          <property>controls/lighting/warning-test</property>
+        </or>
+        <property>controls/electric/battery-switch</property>
+      </and>
+    </condition>
+  </animation>
+  
+</PropertyList>
