@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>FuelGauge.ac</path>
+
+  <animation>
+    <object-name>fond</object-name>
+    <object-name>visses</object-name>
+    <object-name>face</object-name>
+    <object-name>needleL</object-name>
+    <object-name>needleR</object-name>
+    
+    <object-name>vitre</object-name>
+  </animation>
+
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Aircraft/Cirrus-SR22/Models/Effects/Glass/glass</inherits-from>
+    <object-name>vitre</object-name>
+  </effect>
+  
+  <animation>
+    <type>material</type>
+    <object-name>face</object-name>
+    <object-name>needleL</object-name>
+    <object-name>needleR</object-name>
+    <condition>
+      <property>controls/lighting/instrument-lights</property>
+      <property>/controls/electric/battery-switch</property>
+    </condition>
+    <emission>
+      <factor-prop>controls/lighting/luminosite-lights</factor-prop>
+      <red>   0.50 </red>
+      <green> 0.25 </green>
+      <blue>  0.25 </blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>needleL</object-name>
+    <property>consumables/fuel/tank[0]/level-lbs</property>
+    <interpolation>
+      <entry><ind>  0.000 </ind><dep>  0.0 </dep></entry>
+      <entry><ind> 31.747 </ind><dep> 33.0 </dep></entry>
+      <entry><ind> 63.493 </ind><dep> 59.5 </dep></entry>
+      <entry><ind> 95.240 </ind><dep> 90.0 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> -0.00146 </x-m>
+      <y-m> -0.01600 </y-m>
+      <z-m> -0.00005 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>needleR</object-name>
+    <property>/engines/engine/fuel-pressure-psi</property>
+    <interpolation>
+      <entry><ind> 0.00 </ind><dep>  0 </dep></entry>
+      <entry><ind> 2.18 </ind><dep> 25 </dep></entry>
+      <entry><ind> 8.00 </ind><dep> 80 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> -0.00146 </x-m>
+      <y-m>  0.01600 </y-m>
+      <z-m> -0.00005 </z-m>
+    </center>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+</PropertyList>

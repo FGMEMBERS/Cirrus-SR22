@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>all-buttons.ac</path>
+
+  <animation>
+    <object-name>base</object-name>
+    
+    <object-name>alt-onoff</object-name>
+    <object-name>bat-onoff</object-name>
+    <object-name>instr-onoff</object-name>
+    <object-name>ice-onoff</object-name>
+    <object-name>nav-onoff</object-name>
+    <object-name>strobe-onoff</object-name>
+    <object-name>land-onoff</object-name>
+    <object-name>instr-light</object-name>
+    <object-name>panel-light</object-name>
+    <object-name>lights</object-name>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>alt-onoff</object-name>
+    <object-name>bat-onoff</object-name>
+    <object-name>instr-onoff</object-name>
+    <object-name>ice-onoff</object-name>
+    <object-name>nav-onoff</object-name>
+    <object-name>strobe-onoff</object-name>
+    <object-name>land-onoff</object-name>
+    <object-name>instr-light</object-name>
+    <object-name>panel-light</object-name>
+    <object-name>lights</object-name>
+    <condition>
+      <property>controls/lighting/instrument-lights</property>
+      <property>/controls/electric/battery-switch</property>
+    </condition>
+    <emission>
+      <factor-prop>controls/lighting/luminosite-lights</factor-prop>
+      <red>   0.50 </red>
+      <green> 0.25 </green>
+      <blue>  0.25 </blue>
+    </emission>
+  </animation>
+
+  <!-- generator -->
+  <animation>
+    <type>pick</type>
+    <object-name>alt-onoff</object-name>
+    <action>
+      <button>0</button>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/electric/engine/generator</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>/sim/sound/switch</property>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>alt-onoff</object-name>
+    <property>/controls/electric/engine/generator</property>
+    <factor>  35 </factor>
+    <min-deg>  0 </min-deg>
+    <max-deg> 35 </max-deg>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+  
+  <!-- battery -->
+  <animation>
+    <type>pick</type>
+    <object-name>bat-onoff</object-name>
+    <action>
+      <button>0</button>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/electric/battery-switch</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>/sim/sound/switch</property>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>bat-onoff</object-name>
+    <property>/controls/electric/battery-switch</property>
+    <factor>  35 </factor>
+    <min-deg>  0 </min-deg>
+    <max-deg> 35 </max-deg>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+  
+  <!-- Instruments -->
+  <animation>
+    <type>pick</type>
+    <object-name>instr-onoff</object-name>
+    <action>
+      <button>0</button>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/lighting/instrument-lights</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>/sim/sound/switch</property>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>instr-onoff</object-name>
+    <property>/controls/lighting/instrument-lights</property>
+    <factor>  35 </factor>
+    <min-deg>  0 </min-deg>
+    <max-deg> 35 </max-deg>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+  
+  <!-- Ice -->
+  <animation>
+    <type>pick</type>
+    <object-name>ice-onoff</object-name>
+    <action>
+      <button>0</button>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/anti-ice/engine/carb-heat</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>/sim/sound/switch</property>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ice-onoff</object-name>
+    <property>/controls/anti-ice/engine/carb-heat</property>
+    <factor>  35 </factor>
+    <min-deg>  0 </min-deg>
+    <max-deg> 35 </max-deg>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <!-- Lights -->
+  <!-- Nav -->
+  <animation>
+    <type>pick</type>
+    <object-name>nav-onoff</object-name>
+    <action>
+      <button>0</button>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/lighting/nav-lights</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>/sim/sound/switch</property>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>nav-onoff</object-name>
+    <property>/controls/lighting/nav-lights</property>
+    <factor>  35 </factor>
+    <min-deg>  0 </min-deg>
+    <max-deg> 35 </max-deg>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+  
+  <!-- Strobe -->
+  <animation>
+    <type>pick</type>
+    <object-name>strobe-onoff</object-name>
+    <action>
+      <button>0</button>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/lighting/strobe</property>
+       </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>strobe-onoff</object-name>
+    <property>/controls/lighting/strobe</property>
+    <factor>  35 </factor>
+    <min-deg>  0 </min-deg>
+    <max-deg> 35 </max-deg>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <!-- Landing -->
+  <animation>
+    <type>pick</type>
+    <object-name>land-onoff</object-name>
+    <action>
+      <button>0</button>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/lighting/landing-lights</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>/sim/sound/switch</property>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>land-onoff</object-name>
+    <property>/controls/lighting/landing-lights</property>
+    <factor>  35 </factor>
+    <min-deg>  0 </min-deg>
+    <max-deg> 35 </max-deg>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <!-- Instrument luminosite -->
+  <animation>
+    <type>pick</type>
+    <object-name>instr-light</object-name>
+    <visible>true</visible>
+    <action>
+      <button>3</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/lighting/luminosite-lights</property>
+        <step> 0.01 </step>
+        <min> 0 </min>
+        <max> 1 </max>
+        <wrap>false</wrap>
+      </binding>
+    </action>
+    <action>
+      <button>4</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/lighting/luminosite-lights</property>
+        <step> -0.01 </step>
+        <min> 0 </min>
+        <max> 1 </max>
+        <wrap>false</wrap>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation> 
+    <type>rotate</type>
+    <object-name>instr-light</object-name>
+    <property>controls/lighting/luminosite-lights</property>
+    <factor> 270 </factor>
+    <center>
+      <x-m> -0.00138 </x-m>
+      <y-m>  0.11151 </y-m>
+      <z-m>  0.00274 </z-m>  
+    </center>  
+    <axis> 
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>                                                              
+ 
+  <!-- Panel luminosite -->
+  <animation>
+    <type>pick</type>
+    <object-name>panel-light</object-name>
+    <visible>true</visible>
+    <action>
+      <button>3</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/lighting/panel-dim</property>
+        <step> 0.01 </step>
+        <min> 0 </min>
+        <max> 1 </max>
+        <wrap>false</wrap>
+      </binding>
+    </action>
+    <action>
+      <button>4</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/lighting/panel-dim</property>
+        <step> -0.01 </step>
+        <min> 0 </min>
+        <max> 1 </max>
+        <wrap>false</wrap>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation> 
+    <type>rotate</type>
+    <object-name>panel-light</object-name>
+    <property>controls/lighting/panel-dim</property>
+    <factor> 270 </factor>
+    <center>
+      <x-m> -0.00138 </x-m>
+      <y-m>  0.12951 </y-m>
+      <z-m>  0.00274 </z-m>  
+    </center>  
+    <axis> 
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>                                                              
+  
+  <!-- Light luminosite
+  <animation>
+    <type>pick</type>
+    <object-name>panel-light</object-name>
+    <visible>true</visible>
+    <action>
+      <button>3</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/lighting/panel-dim</property>
+        <step> 0.01 </step>
+        <min> 0 </min>
+        <max> 1 </max>
+        <wrap>false</wrap>
+      </binding>
+    </action>
+    <action>
+      <button>4</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/lighting/panel-dim</property>
+        <step> -0.01 </step>
+        <min> 0 </min>
+        <max> 1 </max>
+        <wrap>false</wrap>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation> 
+    <type>rotate</type>
+    <object-name>panel-light</object-name>
+    <property>controls/lighting/panel-dim</property>
+    <factor> 270 </factor>
+    <center>
+      <x-m> -0.00138 </x-m>
+      <y-m>  0.14851 </y-m>
+      <z-m>  0.00274 </z-m>  
+    </center>  
+    <axis> 
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>                                                              
+  -->
+</PropertyList>

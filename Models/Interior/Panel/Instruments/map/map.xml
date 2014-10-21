@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>map.ac</path>
+
+  <animation>
+    <object-name>fond</object-name>
+    <object-name>visses</object-name>
+    <object-name>map</object-name>
+    <object-name>btnL0</object-name>
+    <object-name>btnL1</object-name>
+    <object-name>btnL2</object-name>
+    <object-name>btnL3</object-name>
+    <object-name>btnL4</object-name>
+    <object-name>btnL5</object-name>
+    <object-name>btnR0</object-name>
+    <object-name>btnR1</object-name>
+    <object-name>btnR2</object-name>
+    <object-name>btnR3</object-name>
+    <object-name>btnR4</object-name>
+    <object-name>btnR5</object-name>
+    <object-name>btnR6</object-name>
+    
+    <object-name>vitre</object-name>
+  </animation>
+
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Aircraft/Cirrus-SR22/Models/Effects/Glass/glass</inherits-from>
+    <object-name>vitre</object-name>
+  </effect>
+  
+  <animation>
+    <type>material</type>
+    <object-name>map</object-name>
+    <object-name>btnL0</object-name>
+    <object-name>btnL1</object-name>
+    <object-name>btnL2</object-name>
+    <object-name>btnL3</object-name>
+    <object-name>btnL4</object-name>
+    <object-name>btnL5</object-name>
+    <object-name>btnR0</object-name>
+    <object-name>btnR1</object-name>
+    <object-name>btnR2</object-name>
+    <object-name>btnR3</object-name>
+    <object-name>btnR4</object-name>
+    <object-name>btnR5</object-name>
+    <object-name>btnR6</object-name>
+    <condition>
+      <property>controls/lighting/instrument-lights</property>
+      <property>/controls/electric/battery-switch</property>
+    </condition>
+    <emission>
+      <factor-prop>controls/lighting/luminosite-lights</factor-prop>
+      <red>   0.50 </red>
+      <green> 0.25 </green>
+      <blue>  0.25 </blue>
+    </emission>
+  </animation>
+  
+</PropertyList>
