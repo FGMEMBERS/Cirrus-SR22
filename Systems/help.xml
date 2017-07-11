@@ -9,7 +9,7 @@
     <desc>Open/Close crew door</desc>
   </key>
   <key>
-    <name>D</name>
+    <name>Shift+D</name>
     <desc>Open/Close passenger door</desc>
   </key>
   <key>
@@ -17,7 +17,11 @@
     <desc>Open/Close cargo door</desc>
   </key>
   <key>
-    <name>l</name>
+    <name>L</name>
+    <desc>Lock/unlock castering nose wheel</desc>
+  </key>
+  <key>
+    <name>Shift+L</name>
     <desc>On/Off Landing light</desc>
   </key>
   

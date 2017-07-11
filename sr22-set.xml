@@ -16,6 +16,18 @@
       <model type="int">   4 </model>
     </rating>
 
+    <tags>
+      <tag>ga</tag>
+      <tag>2000s</tag>
+      <tag>2010s</tag>
+      <tag>castering-wheel</tag>
+      <tag>fixed-gear</tag>
+      <tag>tricycle</tag>
+      <tag>propeller</tag>
+      <tag>piston</tag>
+      <!-- tag>supercharged</tag --> <!-- existing variant, not modelled yet -->
+    </tags>
+
   </sim>
 
 </PropertyList>

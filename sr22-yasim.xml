@@ -114,14 +114,17 @@
              </piston-engine>
   </propeller>
   
-  <!-- Noze wheel -->
+  <!-- Castering nose wheel -->
   <gear x="3.093" y="0" z="-1.399" 
         compression="0.15" 
         spring="0.8"
         on-solid="1"
+        castering="1"
         sfric="1"
         dfric="1">
-        <control-input control="STEER" axis="/controls/flight/rudder" square="false"/>
+    <control-input axis="/controls/gear/tailwheel-lock" control="CASTERING" 
+ 	           src0="0" src1="1"
+                   dst0="1" dst1="0"/>
   </gear>
 
   <!-- Left wheel -->
