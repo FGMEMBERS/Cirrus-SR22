@@ -29,8 +29,8 @@
     </binding>
   </key>
   
-  <key n="108">
-    <name>l</name>
+  <key n="76">
+    <name>L</name>
     <desc>Landing light</desc>
     <binding>
       <command>property-toggle</command>

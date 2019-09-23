@@ -24,7 +24,7 @@
     <object-name>needle</object-name>
     <condition>
       <property>controls/lighting/instrument-lights</property>
-      <property>/controls/electric/battery-switch</property>
+      <property>controls/electric/battery-switch</property>
     </condition>
     <emission>
       <factor-prop>controls/lighting/luminosite-lights</factor-prop>
@@ -37,13 +37,16 @@
   <animation>
     <type>rotate</type>
     <object-name>needle</object-name>
-    <property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
+    <property>instrumentation/airspeed-indicator/indicated-speed-kt</property>
     <interpolation>
-      <entry><ind>  20 </ind><dep>   25 </dep></entry>
-      <entry><ind> 140 </ind><dep>   55 </dep></entry>
-      <entry><ind> 160 </ind><dep>   90 </dep></entry>
-      <entry><ind> 180 </ind><dep>  110 </dep></entry>
+      <entry><ind>  40 </ind><dep> -146 </dep></entry>
+      <entry><ind> 100 </ind><dep>  -16 </dep></entry>
+      <entry><ind> 120 </ind><dep>   25 </dep></entry>
+      <entry><ind> 140 </ind><dep>   58 </dep></entry>
+      <entry><ind> 160 </ind><dep>   85 </dep></entry>
+      <entry><ind> 180 </ind><dep>  108 </dep></entry>
       <entry><ind> 200 </ind><dep>  135 </dep></entry>
+      <entry><ind> 210 </ind><dep>  148 </dep></entry>
     </interpolation>
     <axis>
       <x> -1 </x>
